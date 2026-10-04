@@ -2243,7 +2243,7 @@
             sequence, isBonus, cleared: false, spikes: [], coin: null
         };
 
-        if (Math.random() < diff.spikeProb) {
+        if (!isBonus && !isChallenge && Math.random() < diff.spikeProb) {
             const spikeWidth = 8; 
             const maxSpikes = Math.floor((pWidth - 40) / spikeWidth); 
             if (maxSpikes > 0) {
@@ -2259,7 +2259,7 @@
             }
         }
 
-        if (newPlatform.spikes.length === 0 && Math.random() < 0.5) {
+        if (!isBonus && newPlatform.spikes.length === 0 && Math.random() < 0.5) {
             newPlatform.coin = {
                 offsetX: pWidth / 2, offsetY: -40, collected: false,
                 bobOffset: Math.random() * Math.PI * 2
