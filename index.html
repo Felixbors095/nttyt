@@ -2240,7 +2240,7 @@
         const newPlatform = {
             x: newX, y: newY, width: pWidth, height: platformHeight,
             originX: newX, isMoving: isMoving, moveSpeed: moveSpeed, moveRange: moveRange,
-            spikes: [], coin: null
+            sequence, isBonus, cleared: false, spikes: [], coin: null
         };
 
         if (Math.random() < diff.spikeProb) {
